@@ -626,7 +626,33 @@ h1 {
     margin-top: 10px;
 }
 
+.slidein {
+    display: none;
+}
 
+.logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: #fff;
+}
+
+.logo-big {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo-claim {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,0);
+    opacity: 0.4;
+}
 
 
 

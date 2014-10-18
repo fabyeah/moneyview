@@ -1,5 +1,24 @@
 $(document).ready(function() {
 
+	$(document).on('click',".logo-container",function() {
+		window.location.href="index.html";
+	});
+
+
+  	$(document).on("keypress", function(e) {
+   		if(e.keyCode==13){
+			$(".blog-post.slidein").slideDown(400,function() {
+				// do nothing
+			});
+  		}
+  	});
+
+	// setTimeout(function() {
+	// 	$(".blog-post.slidein").slideDown(400,function() {
+	// 		// do nothing
+	// 	});
+	// },3000);
+
 	// MODALS
 	$.modal.defaults = {
 	  overlay: "#000",        // Overlay color
@@ -144,9 +163,9 @@ $(document).ready(function() {
 		var fillColorVar = "rgba(58, 130, 49,0.3)"; //"rgba(41,93,35,0.4)"; //"#cceac8";
 		var strokeColorVar = "rgb(58, 130, 49)"; //"#295D23";
 		var ctx = canvasObj.get(0).getContext("2d");
-		var days = [ "01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
-				"11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21",
-				"22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ];
+		var days = [ "18.09", "19.09", "", "", "22.09", "23.09", "24.09", "25.09", "", "27.09",
+				"28.09", "29.09", "30.09", "", "02.10", "03.10", "04.10", "05.10", "06.10", "", "08.10",
+				"09.10", "10.10", "11.10", "12.10", "", "14.10", "15.10", "16.10", "17.10", "" ];
 
 		var data = {
 			labels : [days[0],days[1],days[2],days[3],days[4],days[5],days[6],days[7],days[8],days[9],days[10],days[11],days[12],days[13],days[14],days[15],days[16],days[17],days[18],days[19],days[20],days[21],days[22],days[23],days[24],days[25],days[26],days[27],days[28],days[29],days[30]],
@@ -154,12 +173,11 @@ $(document).ready(function() {
 					{
 						fillColor : fillColorVar,
 						strokeColor: strokeColorVar,
-						data : [ 20, 30, 24, 26, 19, 33, 24, 22, 19, 17, 23, 25,
-								19, 30, 28, 26, 33, 24, 12, 16, 24, 25, 27, 24, 16,
-								19, 30, 21, 20, 22, 21 ]
+						data : [ 139.4,140.99,,,142.08,141.57,138.70,138.27,139.64,,,136.87,135.60,135.93,136.14,,,,134.90,133.52,131.08,129.44,,,129.58,125.90,126.24,124.75,124.88,,120.05,125.08 ]
 					}
 					]
 		}
+
 
 		new Chart(ctx).Line(data, {
 			bezierCurve: false,
