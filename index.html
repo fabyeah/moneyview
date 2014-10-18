@@ -22,7 +22,8 @@
         
         <div class="topbar">
             <a href="">
-                <span class="light">money</span><span class="bold">moves</span>
+                <img src="img/moneyview_logo_03-02.png" class="logo-img">
+                <!-- <span class="light">money</span><span class="bold">moves</span> -->
             </a>
         </div>
 
@@ -105,7 +106,7 @@
                 </div>
                 <div class="add-resource box">
                     <i class="fa fa-plus"></i>
-                    <a href="#" class="bg-link"></a>
+                    <a href="javascript:;" class="bg-link add-resource-btn"></a>
                 </div>
             </div>
 
@@ -119,7 +120,7 @@
                 </div>
 
                 <div class="add-resource box">
-                    <a href="#" class="bg-link"></a>
+                    <a href="javascript:;" class="bg-link add-resource-btn"></a>
                     <i class="fa fa-plus"></i>
                 </div>
             </div>
@@ -139,8 +140,54 @@
         </div>
 
 
+
+    <!-- add asset modal -->
+    <div class="modal" id="add-asset-modal">
+        <button class="modal-close-btn">
+            <i class="fa fa-times"></i>
+        </button>
+        <p class="modal-hl">
+            <span class="bold">Add an asset</span>
+        </p>
+        <div class="input-wrapper w100">
+            <input type="text" class="search-input w100" tabindex="20" placeholder="Stock symbol or ISIN">
+            <button class="btn icon primary-color-light action-btn" tabindex="20">
+                <i class="fa fa-plus"></i>
+                <span>Add</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- add blogs modal -->
+    <div class="modal" id="add-blogs-modal">
+        <button class="modal-close-btn">
+            <i class="fa fa-times"></i>
+        </button>
+        <p class="modal-hl">
+            <span class="bold">Add a trusted resource</span>
+        </p>
+        <div class="input-wrapper w100">
+            <input type="text" class="search-input w100" tabindex="20" placeholder="Name or URL">
+            <button class="btn icon primary-color-light action-btn" tabindex="20">
+                <i class="fa fa-plus"></i>
+                <span>Add</span>
+            </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery-modal-master/jquery.modal.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

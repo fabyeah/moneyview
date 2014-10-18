@@ -140,11 +140,20 @@ $darkGreen: #295D23;
 $normalGreen: lighten($darkGreen,10%);
 $red: hsla(0, 50%, 50%, 1);
 
+* { 
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+} 
+
+*[tabindex]:focus {
+    outline: none;
+}
 
 html {
     min-height: 100%;
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
 }
 
 body {
@@ -153,7 +162,7 @@ body {
     @include font-roboto-regular;
     margin: 0;
     padding: 0;
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 60px;
     color: #777;
 }
@@ -163,8 +172,27 @@ p {
     margin: 0;
 }
 
+
+button {        
+    border: 0;
+    @include font-roboto-regular;
+    background: transparent;
+    padding: 0;
+}
+
+button:focus, input:focus, textarea:focus {
+    outline: 0;
+}
+
+// Text Input
+input[type="text"], input[type="number"], input[type="password"] {
+    @include font-roboto-light;
+    border: none;
+    height: 41px;
+}    
+
 .topbar {
-    height: 40px;
+    height: 60px;
     background: $darkGreen;
     margin-bottom: 20px;
     position: fixed;
@@ -190,6 +218,13 @@ a {
 
 .topbar a:hover {
     color: rgba(255,255,255,0.9);
+}
+
+.topbar .logo-img {
+    position: relative;
+    top: 8px;
+    height: 36px;
+    opacity: 0.8;
 }
 
 .bold {
@@ -251,6 +286,8 @@ h1 {
     margin-bottom: 10px;
     // cursor: pointer;
     position: relative;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
 
 .box:hover, .box.active {
@@ -402,6 +439,80 @@ h1 {
 
 
 
+
+// MODALS
+
+    .modal {
+        display: none;
+        background: #e0e0e0;
+        padding: 15px;
+        width: 400px;
+        max-height: 70%;
+        overflow-y: auto;
+        
+        // overwrite modal plugin js center positioning
+        top: 20% !important;
+        margin-top: 0 !important;
+
+
+        input {
+            padding: 0px 12px;
+            font-size: 22px;
+            margin: 4px 0 4px 0;
+            color: rgba(0,0,0,0.6);
+            // @include font-roboto-regular;
+        }
+
+        .action-btn {
+            margin-top: 28px;
+        }
+
+        .btn {
+            background: $normalGreen;
+            padding: 10px 18px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .btn i {
+            margin-left: -4px;
+        }
+
+    }
+
+    .modal-hl {
+        color: #666;
+        @include font-roboto-light;
+        margin-bottom: 12px;
+    }
+
+    .modal-hl i {
+        position: relative;
+        top: -1px;
+        margin-right: 3px;
+    }
+
+    .modal-close-btn {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+        font-size: 20px;
+    }
+
+    .remove-btn {
+        position: absolute;
+        right: 0px;
+        top: 16px;
+        color: #aaa;
+        font-size: 20px;
+    }
+
+    .modal-close-btn, .input-x .remove-btn {
+        color: #aaa;
+    }
+
+    .modal-close-btn:hover, .input-x .remove-btn:hover {
+        color: #666;
+    }
 
 
 

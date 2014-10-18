@@ -71,10 +71,18 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+* {
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important; }
+
+*[tabindex]:focus {
+  outline: none; }
+
 html {
   min-height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-y: scroll; }
 
 body {
   background: rgba(0, 0, 0, 0.15);
@@ -83,7 +91,7 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  padding-top: 60px;
+  padding-top: 80px;
   padding-bottom: 60px;
   color: #777; }
 
@@ -91,8 +99,24 @@ p {
   padding: 0;
   margin: 0; }
 
+button {
+  border: 0;
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: transparent;
+  padding: 0; }
+
+button:focus, input:focus, textarea:focus {
+  outline: 0; }
+
+input[type="text"], input[type="number"], input[type="password"] {
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  border: none;
+  height: 41px; }
+
 .topbar {
-  height: 40px;
+  height: 60px;
   background: #295D23;
   margin-bottom: 20px;
   position: fixed;
@@ -115,6 +139,12 @@ a {
 
 .topbar a:hover {
   color: rgba(255, 255, 255, 0.9); }
+
+.topbar .logo-img {
+  position: relative;
+  top: 8px;
+  height: 36px;
+  opacity: 0.8; }
 
 .bold {
   font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -166,7 +196,9 @@ h1 {
   background: #fff;
   padding: 15px 17px;
   margin-bottom: 10px;
-  position: relative; }
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); }
 
 .box:hover, .box.active {
   background: #f0f0f0; }
@@ -290,6 +322,59 @@ h1 {
 
 .social-media-post .post-headline {
   margin-bottom: 4px; }
+
+.modal {
+  display: none;
+  background: #e0e0e0;
+  padding: 15px;
+  width: 400px;
+  max-height: 70%;
+  overflow-y: auto;
+  top: 20% !important;
+  margin-top: 0 !important; }
+  .modal input {
+    padding: 0px 12px;
+    font-size: 22px;
+    margin: 4px 0 4px 0;
+    color: rgba(0, 0, 0, 0.6); }
+  .modal .action-btn {
+    margin-top: 28px; }
+  .modal .btn {
+    background: #3a8231;
+    padding: 10px 18px;
+    color: rgba(255, 255, 255, 0.8); }
+  .modal .btn i {
+    margin-left: -4px; }
+
+.modal-hl {
+  color: #666;
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 12px; }
+
+.modal-hl i {
+  position: relative;
+  top: -1px;
+  margin-right: 3px; }
+
+.modal-close-btn {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 20px; }
+
+.remove-btn {
+  position: absolute;
+  right: 0px;
+  top: 16px;
+  color: #aaa;
+  font-size: 20px; }
+
+.modal-close-btn, .input-x .remove-btn {
+  color: #aaa; }
+
+.modal-close-btn:hover, .input-x .remove-btn:hover {
+  color: #666; }
 
 /* ==========================================================================
    Helper classes
