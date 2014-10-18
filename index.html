@@ -14,29 +14,135 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,300,100,700,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        
+        <div class="topbar">
+            <a href="">
+                <span class="light">money</span><span class="bold">moves</span>
+            </a>
+        </div>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="page-container clearfix">
+            <div class="asset-column">
+                <h1>
+                    Portfolio
+                </h1>
+                <div class="asset box">
+                    <a href="javascript:;" class="bg-link demo-click"></a>
+                    <p class="shortcode bold">APPL</p>
+                    <p class="asset-name">Apple Inc</p>
+                    <p class="stock-exchange">NASDAQ</p>
+                    <div class="info-row clearfix">
+                        <i class="fa fa-caret-up direction"></i>
+                        <p class="asset-price">97,67</p>
+                        <p class="asset-delta">
+                            <span class="price up">+1,41</span><br>
+                            <span class="percent down">+1,46%</span>
+                        </p>
+                        <p class="asset-original-delta-percent">
+                            <span class="info">Win/Loss</span><br>
+                            <span class="bold up">+92,33%</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="asset box">
+                    <a href="#" class="bg-link"></a>
+                    <p class="shortcode bold">VOW3.F</p>
+                    <p class="asset-name">Volkswagen AG</p>
+                    <p class="stock-exchange">NASDAQ</p>
+                    <div class="info-row clearfix">
+                        <i class="fa fa-caret-down direction"></i>
+                        <p class="asset-price">160</p>
+                        <p class="asset-delta">
+                            <span class="price up">+4,55</span><br>
+                            <span class="percent up">+4,26%</span>
+                        </p>
+                        <p class="asset-original-delta-percent">
+                            <span class="info">Win/Loss</span><br>
+                            <span class="bold down">-7,81%</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="asset box">
+                    <a href="#" class="bg-link"></a>
+                    <p class="shortcode bold">MSFT</p>
+                    <p class="asset-name">Microsoft Corporation</p>
+                    <p class="stock-exchange">NASDAQ</p>
+                    <div class="info-row clearfix">
+                        <i class="fa fa-caret-up direction"></i>
+                        <p class="asset-price">43,64</p>
+                        <p class="asset-delta">
+                            <span class="price up">+0,89</span><br>
+                            <span class="percent up">+2,08%</span>
+                        </p>
+                        <p class="asset-original-delta-percent">
+                            <span class="info">Win/Loss</span><br>
+                            <span class="bold up">+49,45%</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="asset box">
+                    <a href="#" class="bg-link"></a>
+                    <p class="shortcode bold">APPL</p>
+                    <p class="asset-name">DWS Investa</p>
+                    <p class="stock-exchange"></p>
+                    <div class="info-row clearfix">
+                        <i class="fa fa-caret-up direction"></i>
+                        <p class="asset-price">120,05</p>
+                        <p class="asset-delta">
+                            <span class="price up">+4,83</span><br>
+                            <span class="percent up">-3,87%</span>
+                        </p>
+                        <p class="asset-original-delta-percent">
+                            <span class="info">Win/Loss</span><br>
+                            <span class="bold up">+4,13%</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="add-resource box">
+                    <i class="fa fa-plus"></i>
+                    <a href="#" class="bg-link"></a>
+                </div>
+            </div>
+
+            <div class="blogs-column">
+                <h1>
+                    Blogs
+                </h1>
+
+                <div class="blogs-column-content">
+                    <!-- insert main blog posts -->
+                </div>
+
+                <div class="add-resource box">
+                    <a href="#" class="bg-link"></a>
+                    <i class="fa fa-plus"></i>
+                </div>
+            </div>
+
+            <div class="social-media-column">
+                <h1>
+                    Social Media
+                </h1>
+                <div class="social-media-column-content">
+                    <!-- insert main social media posts -->
+                </div>
+                <div class="add-resource box">
+                    <a href="#" class="bg-link"></a>
+                    <i class="fa fa-plus"></i>
+                </div>
+            </div>
+        </div>
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
     </body>
 </html>
