@@ -136,7 +136,7 @@ textarea {
     font-style: italic;
 }
 
-$darkGreen: #295D23;
+$darkGreen: #295D23; //#40793A;
 $normalGreen: lighten($darkGreen,10%);
 $red: hsla(0, 50%, 50%, 1);
 
@@ -157,7 +157,8 @@ html {
 }
 
 body {
-    background: rgba(0,0,0,0.15);
+    // background: rgba(0,0,0,0.15);
+    background: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0.2));
     height: 100%;
     @include font-roboto-regular;
     margin: 0;
@@ -194,6 +195,7 @@ input[type="text"], input[type="number"], input[type="password"] {
 .topbar {
     height: 60px;
     background: $darkGreen;
+    // background: linear-gradient(to bottom,$darkGreen, lighten($darkGreen,7%));
     margin-bottom: 20px;
     position: fixed;
     width: 100%;
@@ -204,6 +206,12 @@ input[type="text"], input[type="number"], input[type="password"] {
 
 a {
     text-decoration: none;
+    color: #777;
+    font-weight: 700;
+}
+
+a:hover {
+    color: $darkGreen;
 }
 
 .topbar a {
@@ -225,6 +233,10 @@ a {
     top: 8px;
     height: 36px;
     opacity: 0.8;
+}
+
+.topbar .logo-img:hover {
+    opacity: 1;
 }
 
 .bold {
@@ -281,6 +293,8 @@ h1 {
 }
 
 .box {
+    transition:     background-color 0.1s ease-out,
+                    box-shadow 0.1s ease-out;
     background: #fff;
     padding: 15px 17px;
     margin-bottom: 10px;
@@ -290,9 +304,13 @@ h1 {
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
 
-.box:hover, .box.active {
+.box:hover {
     background: #f0f0f0;
-    // box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.box.active {
+    background: lighten($normalGreen,50%);
 }
 
 .asset .box, .add-resource.box {
@@ -308,13 +326,27 @@ h1 {
     z-index: 1;
 }
 
+.asset.box {
+    padding-bottom: 10px;
+}
+
 .asset .shortcode {
     font-size: 18px;
+    color: #777;
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    z-index: 20;
+}
+
+.asset .shortcode:hover {
+    color: $darkGreen;
 }
 
 .asset-name {
     font-size: 14px;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .stock-exchange {
@@ -402,6 +434,24 @@ h1 {
     font-size: 14px;
     color: rgba(0,0,0,0.4);
     margin-bottom: 6px;
+}
+
+.top-row .shortcode {
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    z-index: 20;
+    color: rgba(0,0,0,0.4);
+}
+
+.top-row .shortcode.active {
+    background: lighten($normalGreen,50%);
+    // color: $normalGreen;
+    padding: 0 4px;
+}
+
+.top-row .shortcode:hover {
+    color: $normalGreen;
 }
 
 .right {
@@ -513,6 +563,68 @@ h1 {
     .modal-close-btn:hover, .input-x .remove-btn:hover {
         color: #666;
     }
+
+
+.backlink {
+    margin-bottom: 20px;
+    margin-left: 12px;
+    display: block;
+}
+
+.graph-container {
+    background: #fff;
+    padding: 15px 17px;
+    margin-bottom: 20px;
+    // cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+.subheadline {
+    margin-left: 12px;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.graph-container .headline {
+    margin-left: 8px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+
+.time-btns {
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+.time-btns span {
+    display: inline-block;
+    margin-right: 2px;
+    padding: 3px 8px;
+    background: rgba(0,0,0,0.2);
+}
+
+.company-container {
+    margin-right: 20px;
+}
+
+.company-container, .more-info-container {
+    width: 470px;
+    float: left;
+    background: #fff;
+    padding: 15px 17px;
+    margin-bottom: 10px;
+    // cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    height: 300px;
+}
+
+.blindtext {
+    margin-top: 10px;
+}
 
 
 

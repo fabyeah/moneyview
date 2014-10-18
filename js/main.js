@@ -134,5 +134,47 @@ $(document).ready(function() {
 	});
 
 
+	if ($(".statistic-chart").length) {
+		createDaysChart($(".statistic-chart"));
+	}
 
-});
+	
+	// create a line chart for days
+	function createDaysChart(canvasObj) {
+		var fillColorVar = "rgba(58, 130, 49,0.3)"; //"rgba(41,93,35,0.4)"; //"#cceac8";
+		var strokeColorVar = "rgb(58, 130, 49)"; //"#295D23";
+		var ctx = canvasObj.get(0).getContext("2d");
+		var days = [ "01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
+				"11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21",
+				"22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ];
+
+		var data = {
+			labels : [days[0],days[1],days[2],days[3],days[4],days[5],days[6],days[7],days[8],days[9],days[10],days[11],days[12],days[13],days[14],days[15],days[16],days[17],days[18],days[19],days[20],days[21],days[22],days[23],days[24],days[25],days[26],days[27],days[28],days[29],days[30]],
+			datasets : [
+					{
+						fillColor : fillColorVar,
+						strokeColor: strokeColorVar,
+						data : [ 20, 30, 24, 26, 19, 33, 24, 22, 19, 17, 23, 25,
+								19, 30, 28, 26, 33, 24, 12, 16, 24, 25, 27, 24, 16,
+								19, 30, 21, 20, 22, 21 ]
+					}
+					]
+		}
+
+		new Chart(ctx).Line(data, {
+			bezierCurve: false,
+			pointDot: false,
+			scaleFontFamily : "'Arial',sans-serif",
+			scaleShowGridLines : true,
+			scaleGridLineColor : "#ddd",
+			animation : true,
+			animationEasing : "easeOutQuart",
+			animationSteps : "100"
+		});
+
+	}
+
+
+
+
+}); // document ready
